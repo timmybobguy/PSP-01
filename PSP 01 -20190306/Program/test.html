@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="src/Controller.js"></script>
+	<script src="src/htmlFunctions.js"></script>
+	<script src="src/Table.js"></script>
+	<script src="src/Value.js"></script>
+	<script src="src/simpleLoader.js"></script>
+</head>
+
+
+<body onload="onLoad()">
+<script>
+function onLoad() {
+  var theNewTable
+  theNewTable = Controller.setup()
+  console.log( theNewTable )
+
+  // Creating the input button
+  var ibxFile = document.createElement("INPUT");
+  ibxFile.setAttribute("type", "file");
+  ibxFile.setAttribute("id", "inputFile");
+  ibxFile.setAttribute("multiple", "multiple");
+  document.body.appendChild(ibxFile);
+  document.getElementById("inputFile").addEventListener('change', fileChangeHandler);
+  
+}
+</script>
+<main>
+</main>
+</body>
+</html>
